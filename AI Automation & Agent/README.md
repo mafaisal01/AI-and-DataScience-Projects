@@ -1,4 +1,7 @@
 
+![1735582411367](https://github.com/user-attachments/assets/fae06a5d-211a-4254-96f0-ecbd44b2b0c9)
+
+---
 # 🔧 Blueprint CF – Customer Feedback Automation Agent
 
 ## 📘 Index
