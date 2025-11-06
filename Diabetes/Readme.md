@@ -13,12 +13,12 @@ The model uses **Support Vector Machine (SVM)** with a linear kernel for classif
 2. Data Collection & Analysis
 3. Separating Features and Target  
 4. Data Preprocessing (Standardization)  
-5. Train-Test Split  
+5. Splitting the Data (Train-Test Split)  
 6. Model Training (SVM Classifier)  
 7. Model Evaluation  
 8. Making Predictions
-9. Result
-10. Key takeaways
+9. Model Summary (Result)
+10. Key insights
 11. Data Source
 
 ---
@@ -72,7 +72,7 @@ Y = diabetes_dataset['Outcome']                      # Target variable
 
 ---
 
-### 4. Data Standardization
+### 4. Data Preprocessing (Standardization)  
 
 Machine learning models work better when data is standardized (mean = 0, std = 1).
 
@@ -90,7 +90,7 @@ Y = diabetes_dataset['Outcome']
 
 ---
 
-### 5. Train-Test Split
+### 5. Splitting the Data (Train-Test Split)
 
 Split data into training and testing sets to evaluate model performance.
 
@@ -179,7 +179,7 @@ The person is diabetic
 
 ---
 
-## 📊 Results
+## 📊 Model Summary (Result)
 
 | Dataset       | Accuracy |
 | ------------- | -------- |
@@ -188,7 +188,7 @@ The person is diabetic
 
 ---
 
-## 🧠 Key Takeaways
+## 🧠 Key Insights
 
 * **Data Standardization** improves model convergence.
 * **Linear SVM** performs well on linearly separable data.
