@@ -11,18 +11,15 @@ The model uses **Logistic Regression** for binary classification and achieves ov
 ## 🧩 Project Workflow
 
 1. Importing Dependencies  
-2. Data Collection and Exploration
-3. Loading the Data into a DataFrame
-4. Data Overview (Data Preprocessing)
-5. Target Variable Analysis (Data Preprocessing)
-6. Separating Features and Target
-7. Splitting the Data (Train-Test Split)
-8. Model Training (Logistic Regression)
-9. Model Evaluation
-10. Making Predictions
-11. Model Summary (Result)
-12. Key Insights
-13. Data Source
+2. Data Collection, Exploration and Analysis
+3. Separating Features and Target
+4. Splitting the Data (Train-Test Split)
+5. Model Training (Logistic Regression)
+6. Model Evaluation
+7. Making Predictions
+8. Model Summary (Result)
+9. Key Insights
+10. Data Source
 
   
 ---
@@ -41,7 +38,7 @@ from sklearn.metrics import accuracy_score             # For evaluating model pe
 
 ---
 
-## 📊 2. Data Collection & Exploration
+## 📊 2. Data Collection & Analysis
 
 ```python
 # Loading the dataset from sklearn
@@ -49,88 +46,59 @@ breast_cancer_dataset = sklearn.datasets.load_breast_cancer()
 
 # Displaying dataset structure
 print(breast_cancer_dataset)
-```
 
-The dataset includes:
+# The dataset includes:
+# 569 samples and 30 numerical features
+# Target:  0 = Malignant, 1 = Benign
+# Source: UCI Machine Learning Repository
 
-* **569 samples** and **30 numerical features**
-* **Target:** 0 = *Malignant*, 1 = *Benign*
-* Source: UCI Machine Learning Repository
-
----
-
-## 🧾 3. Loading the Data into a DataFrame
-
-```python
+# Loading the Data into a DataFrame
 # Creating a pandas DataFrame with feature names
 data_frame = pd.DataFrame(
     breast_cancer_dataset.data, 
     columns=breast_cancer_dataset.feature_names
 )
 
+
 # Displaying first 5 rows
 data_frame.head()
-```
 
-Then, we add the target column:
-
-```python
+# Then, we add the target column:
 # Adding the 'label' column (Target)
 data_frame['label'] = breast_cancer_dataset.target
 
 # Checking the last few rows
 data_frame.tail()
-```
 
----
-
-## 🧮 4. Data Overview
-
-```python
 # Checking shape (rows, columns)
 data_frame.shape
 # Output: (569, 31)
 
 # Dataset summary
 data_frame.info()
-```
 
-✅ No missing values detected:
-
-```python
+# No missing values detected:
 data_frame.isnull().sum()
-```
 
-Descriptive statistics:
-
-```python
+# Descriptive statistics:
 data_frame.describe()
-```
 
----
-
-## 📈 5. Target Variable Analysis
-
-```python
 # Checking class distribution
 data_frame['label'].value_counts()
-```
 
-**Output:**
+# Output:
+# 1 (Benign)    357
+# 0 (Malignant) 212
 
-```
-1 (Benign)    357
-0 (Malignant) 212
-```
+ # So, about 63% benign and 37% malignant cases.
 
-So, about **63% benign** and **37% malignant** cases.
-
-```python
 # Calculating mean values for each class
 data_frame.groupby('label').mean()
+
+# This helps identify feature differences between malignant and benign tumors.
+
 ```
 
-This helps identify feature differences between malignant and benign tumors.
 
 ---
 
@@ -149,7 +117,7 @@ print(Y.shape)  # (569,)
 
 ---
 
-## ✂️ 7. Splitting the Data
+## ✂️ 7. Splitting the Data (Train-Test Split)  
 
 ```python
 # Splitting into training and testing datasets
@@ -212,7 +180,7 @@ Accuracy on test data = 0.93
 
 ---
 
-## 🧬 10. Building a Predictive System
+## 🧬 10. Making a Predictive System
 
 ```python
 # Example input data for prediction
@@ -249,7 +217,7 @@ The Breast Cancer is Benign
 
 ---
 
-## 📊 11. Model Summary
+## 📊 11. Model Summary (Result)
 
 | Dataset       | Accuracy |
 | ------------- | -------- |
