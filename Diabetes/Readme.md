@@ -16,7 +16,10 @@ The model uses **Support Vector Machine (SVM)** with a linear kernel for classif
 5. Train-Test Split  
 6. Model Training (SVM Classifier)  
 7. Model Evaluation  
-8. Making Predictions  
+8. Making Predictions
+9. Result
+10. Key takeaways
+11. Data Source
 
 ---
 
