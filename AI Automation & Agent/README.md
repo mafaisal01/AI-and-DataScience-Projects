@@ -17,11 +17,15 @@
 | **Outcome**                    | Single task completion.                                                                           | Multi-step process completion.                                                                                | Continuous goal pursuit and adaptive decision-making.                                                               |
 
 
+
 ### 🔍 **In Simple Terms**
 
-* **AI Automation** = *"Do this specific task for me."*
-* **AI Workflow** = *"Handle this entire process automatically."*
-* **AI Agent** = *"Understand my goal and figure out how to achieve it autonomously."*
+| **Concept**       | **Definition**                                            | **Example**                              | **Advantages**                      | **Disadvantages**                        |
+| ----------------- | --------------------------------------------------------- | ---------------------------------------- | ----------------------------------- | ---------------------------------------- |
+| **AI Automation** | AI Automation means telling the AI to perform a specific, repetitive task automatically.                      | An AI tool that automatically replies to customer emails with predefined templates.            | Fast, accurate, reduces manual work | Limited, can’t handle new situations     |
+| **AI Workflow**   | AI Workflow means automating a complete sequence of related tasks from start to finish.                     | A hiring workflow that automatically scans resumes, schedules interviews, and sends updates to applicants. | Saves time, consistent, efficient   | Hard to set up, breaks if one step fails |
+| **AI Agent**      | AI Agent means an intelligent system that understands your goal and autonomously decides the best way to achieve it. | A virtual assistant that books your flight, hotel, and taxi after understanding your travel preferences and calendar. | Smart, adaptive, learns from use    | Complex, unpredictable, less control     |
+
 
 
 
