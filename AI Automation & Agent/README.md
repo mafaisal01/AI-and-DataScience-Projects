@@ -1,6 +1,4 @@
 
-![1735582411367](https://github.com/user-attachments/assets/fae06a5d-211a-4254-96f0-ecbd44b2b0c9)
-
 
 | **Aspect**                     | **AI Automation**                                                                                                                  | **AI Workflow**                                                                                                                                    | **AI Agent**                                                                                                                                    |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -33,7 +31,7 @@
 4. [🗺️ Workflow Mapping](#️-workflow-mapping)
 5. [🧰 Tool Selection](#-tool-selection)
 
----
+
 
 ## 🎯 Purpose & Scope
 
@@ -45,7 +43,6 @@ The core objective of this AI agent framework is to **reduce manual work** for t
 
 The agent will be considered successful if it can **reduce manual work by at least 30%** in feedback management.
 
----
 
 ## ⚡ Trigger
 
@@ -54,7 +51,6 @@ The agent will be considered successful if it can **reduce manual work by at lea
 The agent is triggered **whenever a customer fills out the feedback form**.
 This form submission acts as the **starting point** for the automation workflow.
 
----
 
 ## 🤖 Actions
 
@@ -75,7 +71,6 @@ The agent performs the following actions automatically:
 
 Only **one workflow** is required to handle all types of feedback.
 
----
 
 ## 🗺️ Workflow Mapping
 
@@ -98,7 +93,6 @@ Only **one workflow** is required to handle all types of feedback.
 * Feature Request → Concerned Department
 * Compliment → Owner’s Department
 
----
 
 ## 🧰 Tool Selection
 
@@ -113,7 +107,6 @@ Only **one workflow** is required to handle all types of feedback.
 | **LLM (Advanced Agent Node)** | Analyze and categorize customer feedback               |
 | **Switch Node**               | Control branching logic in the workflow                |
 
----
 
 ### ✅ Summary
 
