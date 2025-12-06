@@ -44,20 +44,29 @@ from sklearn.metrics import accuracy_score  # For evaluating model performance
 # Loading the PIMA Diabetes Dataset
 diabetes_dataset = pd.read_csv('/content/diabetes.csv')  # Reads the CSV file into a pandas DataFrame
 
-# Displaying first 5 rows of the dataset
-diabetes_dataset.head()  # Helps understand data format and features
+# Displaying first 5 rows with coloums of the dataset : Helps understand datasets summary format and features
+diabetes_dataset.head()
 
-# Checking dataset dimensions
-diabetes_dataset.shape   # Returns (rows, columns)
+# Displaying last 5 rows with coloums of the dataset : Helps understand datasets summary format and features
+diabetes_dataset.tail()
 
-# Statistical summary of dataset
-diabetes_dataset.describe()  # Provides mean, std, min, max, etc. for each feature
+# Checking dataset dimensions: Returns (rows, columns)
+diabetes_dataset.shape
 
-# Checking distribution of diabetic vs non-diabetic cases
-diabetes_dataset['Outcome'].value_counts()  # 0 = Non-diabetic, 1 = Diabetic
+# Dataset summary
+diabetes_dataset.info()
 
-# Comparing mean values of features based on Outcome
-diabetes_dataset.groupby('Outcome').mean()  # Helps find feature differences between classes
+# Statistical summary of dataset : Provides mean, std, min, max, etc. for each feature
+diabetes_dataset.describe()
+
+# No missing values detected:
+diabetes_dataset.isnull().sum()
+
+# Checking class distribution : diabetic vs non-diabetic cases | 0 = Non-diabetic, 1 = Diabetic
+diabetes_dataset['Outcome'].value_counts()  
+
+# Calculating mean values for each class : Helps find feature differences between classes
+diabetes_dataset.groupby('Outcome').mean()  
 ```
 
 ---
