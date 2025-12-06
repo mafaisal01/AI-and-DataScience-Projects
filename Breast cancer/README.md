@@ -47,30 +47,27 @@ breast_cancer_dataset = sklearn.datasets.load_breast_cancer()
 # Displaying dataset structure
 print(breast_cancer_dataset)
 
-# The dataset includes:
-# 569 samples and 30 numerical features
-# Target:  0 = Malignant, 1 = Benign
+# The dataset includes: 569 samples and 30 numerical features | Target:  0 = Malignant, 1 = Benign
 # Source: UCI Machine Learning Repository
 
-# Loading the Data into a DataFrame
-# Creating a pandas DataFrame with feature names
+# Loading the Data into a DataFrame : Creating a pandas DataFrame with feature names
 data_frame = pd.DataFrame(
     breast_cancer_dataset.data, 
     columns=breast_cancer_dataset.feature_names
 )
 
-
-# Displaying first 5 rows
-data_frame.head()
-
-# Then, we add the target column:
-# Adding the 'label' column (Target)
+# Then, we add the target column: Adding the 'label' column (Target)
 data_frame['label'] = breast_cancer_dataset.target
 
-# Checking the last few rows
+
+# Displaying first 5 rows with coloums of the dataset : Helps understand datasets summary format and features
+data_frame.head()
+
+# Displaying last 5 rows with coloums of the dataset : Helps understand datasets summary format and features
 data_frame.tail()
 
-# Checking shape (rows, columns)
+
+# Checking dataset dimensions: Returns (rows, columns)
 data_frame.shape
 # Output: (569, 31)
 
@@ -80,7 +77,7 @@ data_frame.info()
 # No missing values detected:
 data_frame.isnull().sum()
 
-# Descriptive statistics:
+# Statistical summary of dataset : Provides mean, std, min, max, etc. for each feature
 data_frame.describe()
 
 # Checking class distribution
@@ -92,7 +89,7 @@ data_frame['label'].value_counts()
 
  # So, about 63% benign and 37% malignant cases.
 
-# Calculating mean values for each class
+# Calculating mean values for each class : Helps find feature differences between classes
 data_frame.groupby('label').mean()
 
 # This helps identify feature differences between malignant and benign tumors.
