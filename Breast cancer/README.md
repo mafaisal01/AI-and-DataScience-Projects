@@ -13,13 +13,12 @@ The model uses **Logistic Regression** for binary classification and achieves ov
 1. Importing Dependencies  
 2. Data Collection, Exploration and Analysis
 3. Separating Features and Target
-4. Splitting the Data (Train-Test Split)
-5. Model Training (Logistic Regression)
-6. Model Evaluation
-7. Making Predictions
-8. Model Summary (Result)
-9. Key Insights
-10. Data Source
+4. Data Preprocessing (Standardization)  
+5. Splitting the Data (Train-Test Split)
+6. Model Training (Logistic Regression)
+7. Model Evaluation
+8. Making Predictions
+9. Data Source
 
   
 ---
@@ -38,7 +37,7 @@ from sklearn.metrics import accuracy_score             # For evaluating model pe
 
 ---
 
-## 📊 2. Data Collection & Analysis
+## 📊 2. Data Collection, Exploration and Analysis
 
 ```python
 # Loading the dataset from sklearn
@@ -60,27 +59,30 @@ data_frame = pd.DataFrame(
 data_frame['label'] = breast_cancer_dataset.target
 
 
-# Displaying first 5 rows with coloums of the dataset : Helps understand datasets summary format and features
+# Displaying first 5 rows with coloums of the dataset summary : Helps understand datasets summary format and features
 data_frame.head()
 
-# Displaying last 5 rows with coloums of the dataset : Helps understand datasets summary format and features
+# Displaying last 5 rows with coloums of the dataset summary : Helps understand datasets summary format and features
 data_frame.tail()
 
 
-# Checking dataset dimensions: Returns (rows, columns)
+# Displaying dimensions: Returns (rows, columns) of the dataset summary : Helps understand datasets summary format and features
 data_frame.shape
 # Output: (569, 31)
 
-# Dataset summary
+
+# Displaying all information of the dataset summary : Helps understand datasets summary format and features
 data_frame.info()
 
-# No missing values detected:
+# Displaying No missing values detected of the dataset summary : Helps understand datasets summary format and features
 data_frame.isnull().sum()
 
-# Statistical summary of dataset : Provides mean, std, min, max, etc. for each feature
+
+# Displaying statistical (Provides mean, std, min, max, etc. for each feature) of the dataset summary : Helps understand datasets summary format and features
 data_frame.describe()
 
-# Checking class distribution
+
+# Displaying class distribution (Benign vs Malignant cases | 0 = Malignant, 1 = Benign) of the dataset summary : Helps understand datasets summary format and features
 data_frame['label'].value_counts()
 
 # Output:
@@ -89,17 +91,17 @@ data_frame['label'].value_counts()
 
  # So, about 63% benign and 37% malignant cases.
 
-# Calculating mean values for each class : Helps find feature differences between classes
+
+# Displaying mean values for each class distribution of the dataset summary : Helps understand datasets summary format and features
 data_frame.groupby('label').mean()
 
-# This helps identify feature differences between malignant and benign tumors.
 
 ```
 
 
 ---
 
-## 🧠 6. Separating Features and Target
+## 3. Separating Features and Target
 
 ```python
 # Independent variables (features)
@@ -114,7 +116,12 @@ print(Y.shape)  # (569,)
 
 ---
 
-## ✂️ 7. Splitting the Data (Train-Test Split)  
+## 4. Data Preprocessing (Standardization)  
+-- Not Use in this 
+
+
+
+## 5. Splitting the Data (Train-Test Split)  
 
 ```python
 # Splitting into training and testing datasets
@@ -128,7 +135,7 @@ print(X.shape, X_train.shape, X_test.shape)
 
 ---
 
-## 🤖 8. Model Training — Logistic Regression
+## 6. Model Training — Logistic Regression
 
 ```python
 # Initializing the Logistic Regression model
@@ -143,7 +150,7 @@ model.fit(X_train, Y_train)
 
 ---
 
-## 📏 9. Model Evaluation
+## 7. Model Evaluation
 
 ```python
 # Accuracy on training data
@@ -177,7 +184,7 @@ Accuracy on test data = 0.93
 
 ---
 
-## 🧬 10. Making a Predictive System
+## 8. Making a Predictive System
 
 ```python
 # Example input data for prediction
@@ -208,35 +215,13 @@ else:
 **Output Example:**
 
 ```
-[1]
-The Breast Cancer is Benign
+[1] The Breast Cancer is Benign
 ```
 
 ---
 
-## 📊 11. Model Summary (Result)
 
-| Dataset       | Accuracy |
-| ------------- | -------- |
-| Training Data | 94.9%    |
-| Test Data     | 92.9%    |
-
----
-
-## 💡 Key Insights
-
-* Logistic Regression performs **strongly** on this dataset without scaling.
-* No missing data simplifies preprocessing.
-* The dataset is slightly **imbalanced**, but accuracy remains high.
-* Could be improved using:
-
-  * Feature scaling
-  * Regularization tuning
-  * Cross-validation
-
----
-
-## 🧾 Dataset Source
+## 9. Dataset Source
 
 **Breast Cancer Wisconsin (Diagnostic) Dataset**
 Available in `sklearn.datasets`
