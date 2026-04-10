@@ -10,16 +10,14 @@ The model uses **Support Vector Machine (SVM)** with a linear kernel for classif
 ## 🧩 Project Structure
 
 1. Import Dependencies  
-2. Data Collection & Analysis
+2. Data Collection, Exploration and Analysis
 3. Separating Features and Target  
 4. Data Preprocessing (Standardization)  
 5. Splitting the Data (Train-Test Split)  
 6. Model Training (SVM Classifier)  
 7. Model Evaluation  
 8. Making Predictions
-9. Model Summary (Result)
-10. Key insights
-11. Data Source
+9. Data Source
 
 ---
 
@@ -38,35 +36,41 @@ from sklearn.metrics import accuracy_score  # For evaluating model performance
 
 ---
 
-### 2. Data Collection and Analysis
+### 2. Data Collection, Exploration and Analysis
 
 ```python
 # Loading the PIMA Diabetes Dataset
 diabetes_dataset = pd.read_csv('/content/diabetes.csv')  # Reads the CSV file into a pandas DataFrame
 
-# Displaying first 5 rows with coloums of the dataset : Helps understand datasets summary format and features
+# Displaying first 5 rows with coloums of the dataset summary : Helps understand datasets summary format and features
 diabetes_dataset.head()
 
-# Displaying last 5 rows with coloums of the dataset : Helps understand datasets summary format and features
+# Displaying last 5 rows with coloums of the dataset summary : Helps understand datasets summary format and features
 diabetes_dataset.tail()
 
-# Checking dataset dimensions: Returns (rows, columns)
+
+# Displaying dimensions: Returns (rows, columns) of the dataset summary : Helps understand datasets summary format and features
 diabetes_dataset.shape
 
-# Dataset summary
+# Displaying all information of the dataset summary : Helps understand datasets summary format and features
 diabetes_dataset.info()
 
-# Statistical summary of dataset : Provides mean, std, min, max, etc. for each feature
+
+# Displaying statistical (Provides mean, std, min, max, etc. for each feature) of the dataset summary : Helps understand datasets summary format and features
 diabetes_dataset.describe()
 
-# No missing values detected:
+
+# Displaying No missing values detected of the dataset summary : Helps understand datasets summary format and features
 diabetes_dataset.isnull().sum()
 
-# Checking class distribution : diabetic vs non-diabetic cases | 0 = Non-diabetic, 1 = Diabetic
+
+# Displaying class distribution (diabetic vs non-diabetic cases | 0 = Non-diabetic, 1 = Diabetic) of the dataset summary : Helps understand datasets summary format and features
 diabetes_dataset['Outcome'].value_counts()  
 
-# Calculating mean values for each class : Helps find feature differences between classes
-diabetes_dataset.groupby('Outcome').mean()  
+
+# Displaying mean values for each class distribution of the dataset summary : Helps understand datasets summary format and features
+diabetes_dataset.groupby('Outcome').mean()
+
 ```
 
 ---
@@ -186,30 +190,9 @@ else:
 The person is diabetic
 ```
 
----
 
-## 📊 Model Summary (Result)
 
-| Dataset       | Accuracy |
-| ------------- | -------- |
-| Training Data | ~78.6%   |
-| Test Data     | ~77.2%   |
-
----
-
-## 🧠 Key Insights
-
-* **Data Standardization** improves model convergence.
-* **Linear SVM** performs well on linearly separable data.
-* The dataset shows moderate accuracy, meaning there’s potential for improvement with:
-
-  * Feature engineering
-  * Non-linear kernels (e.g., `rbf`)
-  * Hyperparameter tuning
-
----
-
-## 🧾 Dataset Source
+## 9 🧾 Dataset Source
 
 [PIMA Indians Diabetes Database - Kaggle](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
 
